@@ -51,10 +51,10 @@ class TodoList extends StatefulWidget {
   final String title;
 
   @override
-  State<TodoList> createState() => _MyHomePageState();
+  State<TodoList> createState() => _TodoListState();
 }
 
-class _MyHomePageState extends State<TodoList> {
+class _TodoListState extends State<TodoList> {
   int _counter = 0;
 
   void _incrementCounter() {

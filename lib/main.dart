@@ -58,6 +58,13 @@ class _TodoListState extends State<TodoList> {
   final List<Todo> _todos = <Todo>[];
   final TextEditingController _textFieldController = TextEditingController();
 
+  void _addTodoItem(String name) {
+    setState(() {
+      _todos.add(Todo(name: name, completed: false));
+    });
+    _textFieldController.clear();
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done

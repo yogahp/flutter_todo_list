@@ -71,6 +71,12 @@ class _TodoListState extends State<TodoList> {
     });
   }
 
+  void _deleteTodo(Todo todo) {
+    setState(() {
+      _todos.removeWhere((element) => element.name == todo.name);
+    });
+  }
+
   Future<void> _displayDialog() async {
     return showDialog<void>(
       context: context,

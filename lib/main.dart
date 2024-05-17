@@ -65,6 +65,12 @@ class _TodoListState extends State<TodoList> {
     _textFieldController.clear();
   }
 
+  void _handleTodoChange(Todo todo) {
+    setState(() {
+      todo.completed = !todo.completed;
+    });
+  }
+
   Future<void> _displayDialog() async {
     return showDialog<void>(
       context: context,
